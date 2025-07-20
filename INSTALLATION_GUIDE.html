@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Scroll Extension - Testing Guide</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+        }
+        .status-box {
+            background: #e3f2fd;
+            border: 1px solid #2196f3;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .success {
+            background: #e8f5e8;
+            border-color: #4caf50;
+            color: #2e7d32;
+        }
+        .warning {
+            background: #fff3e0;
+            border-color: #ff9800;
+            color: #f57c00;
+        }
+        .error {
+            background: #ffebee;
+            border-color: #f44336;
+            color: #c62828;
+        }
+        ol li {
+            margin-bottom: 10px;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .feature-list {
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .troubleshoot {
+            background: #fef7e0;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Auto Scroll Extension - Ready to Use!</h1>
+        
+        <div class="status-box success">
+            <h3>✅ Extension Successfully Built!</h3>
+            <p><strong>Build Location:</strong> <code>E:\Auto-Scroll-extension\build</code></p>
+            <p><strong>Default State:</strong> OFF (You need to manually enable it)</p>
+        </div>
+
+        <h2>📋 Installation Steps</h2>
+        <ol>
+            <li>Open Chrome and go to <code>chrome://extensions/</code></li>
+            <li>Enable <strong>"Developer mode"</strong> (toggle in top-right)</li>
+            <li>Click <strong>"Load unpacked"</strong></li>
+            <li>Select the folder: <code>E:\Auto-Scroll-extension\build</code></li>
+            <li>The extension icon should appear in your toolbar</li>
+        </ol>
+
+        <h2>🎯 How to Test</h2>
+        <ol>
+            <li><strong>Install the extension</strong> using steps above</li>
+            <li><strong>Go to Instagram Reels:</strong> <code>https://www.instagram.com/reels/</code></li>
+            <li><strong>Or YouTube Shorts:</strong> <code>https://www.youtube.com/shorts/</code></li>
+            <li><strong>Click the extension icon</strong> in your toolbar</li>
+            <li><strong>Toggle ON</strong> the auto-scroll feature</li>
+            <li><strong>Watch a video</strong> - when it ends, it should automatically scroll to next</li>
+        </ol>
+
+        <div class="feature-list">
+            <h3>🎉 Features Fixed:</h3>
+            <ul>
+                <li>✅ <strong>Default State:</strong> Extension now starts OFF</li>
+                <li>✅ <strong>Better Detection:</strong> Improved Instagram Reels and YouTube Shorts detection</li>
+                <li>✅ <strong>Smart Scrolling:</strong> More accurate container detection for scrolling</li>
+                <li>✅ <strong>Debug Logging:</strong> Console logs to help debug issues</li>
+                <li>✅ <strong>Error Handling:</strong> Better error handling and fallbacks</li>
+            </ul>
+        </div>
+
+        <h2>🔧 Usage Instructions</h2>
+        <div class="status-box">
+            <h4>For Instagram Reels:</h4>
+            <p>1. Go to any Instagram Reels page</p>
+            <p>2. Click extension icon and toggle ON</p>
+            <p>3. Watch videos - they'll auto-scroll when finished</p>
+        </div>
+
+        <div class="status-box">
+            <h4>For YouTube Shorts:</h4>
+            <p>1. Go to any YouTube Shorts page</p>
+            <p>2. Click extension icon and toggle ON</p>
+            <p>3. Watch videos - they'll auto-scroll when finished</p>
+        </div>
+
+        <div class="troubleshoot">
+            <h3>🔍 Troubleshooting</h3>
+            <p><strong>If auto-scroll isn't working:</strong></p>
+            <ul>
+                <li>Check if you're on a Reels or Shorts page</li>
+                <li>Make sure the toggle is ON in the extension popup</li>
+                <li>Open browser console (F12) to see debug logs</li>
+                <li>Try refreshing the page after enabling</li>
+                <li>Make sure videos actually end (some loop forever)</li>
+            </ul>
+        </div>
+
+        <h2>💻 Developer Info</h2>
+        <p><strong>Extension Type:</strong> Manifest V3 Browser Extension</p>
+        <p><strong>Framework:</strong> React + Redux</p>
+        <p><strong>Platforms:</strong> Instagram Reels, YouTube Shorts</p>
+        <p><strong>Permissions:</strong> Active Tab, Scripting, Storage</p>
+
+        <div class="status-box warning">
+            <h4>⚠️ Important Notes:</h4>
+            <ul>
+                <li>Extension only works on Instagram Reels and YouTube Shorts pages</li>
+                <li>Some videos may loop infinitely and never trigger the "ended" event</li>
+                <li>You must manually enable the extension for each browsing session</li>
+                <li>Settings are saved and persist between browser sessions</li>
+            </ul>
+        </div>
+
+        <h2>🎊 Ready to Go!</h2>
+        <p>Your Auto Scroll Extension is now ready to use! Follow the installation steps above and enjoy automatic scrolling on your favorite short-form video platforms.</p>
+        
+        <p><em>Made with ❤️ for seamless video browsing experience!</em></p>
+    </div>
+</body>
+</html>

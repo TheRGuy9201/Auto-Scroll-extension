@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Scroll Down Extension",
+  "version": "1.0",
+  "description": "Automatically scrolls to the next video on Instagram Reels and YouTube Shorts.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.instagram.com/reels/*",
+        "*://www.instagram.com/reel/*",
+        "*://www.instagram.com/p/*",
+        "*://www.instagram.com/stories/*",
+        "*://www.youtube.com/shorts/*",
+        "*://www.instagram.com/*",
+        "*://www.youtube.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js"],
+      "matches": ["*://*/*"]
+    }
+  ],
+  "host_permissions": [
+    "*://www.instagram.com/*",
+    "*://www.youtube.com/*"
+  ]
+}
