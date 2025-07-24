@@ -18,26 +18,16 @@ function buildExtension() {
   const manifestDest = path.join(buildDir, 'manifest.json');
   if (fs.existsSync(manifestSrc)) {
     fs.copyFileSync(manifestSrc, manifestDest);
-    console.log('✓ Copied manifest.json');
-  }
+  console.log('✓ Copied manifest.json');
+}
 
-  // Copy background.js
-  const backgroundSrc = path.join(publicDir, 'background.js');
-  const backgroundDest = path.join(buildDir, 'background.js');
-  if (fs.existsSync(backgroundSrc)) {
-    fs.copyFileSync(backgroundSrc, backgroundDest);
-    console.log('✓ Copied background.js');
-  }
-
-  // Copy content.js
-  const contentSrc = path.join(publicDir, 'content.js');
-  const contentDest = path.join(buildDir, 'content.js');
-  if (fs.existsSync(contentSrc)) {
-    fs.copyFileSync(contentSrc, contentDest);
-    console.log('✓ Copied content.js');
-  }
-
-  // Copy popup HTML
+// Copy content.js
+const contentSrc = path.join(publicDir, 'content.js');
+const contentDest = path.join(buildDir, 'content.js');
+if (fs.existsSync(contentSrc)) {
+  fs.copyFileSync(contentSrc, contentDest);
+  console.log('✓ Copied content.js');
+}  // Copy popup HTML
   const popupSrc = path.join(publicDir, 'index.html');
   const popupDest = path.join(buildDir, 'index.html');
   if (fs.existsSync(popupSrc)) {

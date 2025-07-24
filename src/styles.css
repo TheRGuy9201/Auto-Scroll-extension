@@ -171,3 +171,82 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* Toggle Switch Styles */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border-left: 4px solid #667eea;
+}
+
+.toggle-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.toggle-description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 2px;
+}
+
+.toggle-switch-container {
+  position: relative;
+}
+
+.toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-switch:hover {
+  background-color: #bbb;
+}
+
+.toggle-input:checked + .toggle-switch {
+  background-color: #667eea;
+}
+
+.toggle-input:checked + .toggle-switch:hover {
+  background-color: #5a6fd8;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.toggle-input:checked + .toggle-switch .toggle-slider {
+  transform: translateX(26px);
+}

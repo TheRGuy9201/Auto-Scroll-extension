@@ -9,10 +9,6 @@ if (-not (Test-Path -Path "build")) {
 Write-Host "Copying manifest.json..."
 Copy-Item -Path "public\manifest.json" -Destination "build\manifest.json"
 
-# Copy background script
-Write-Host "Copying background.js..."
-Copy-Item -Path "public\background.js" -Destination "build\background.js"
-
 # Copy content script
 Write-Host "Copying content.js..."
 Copy-Item -Path "public\content.js" -Destination "build\content.js"
