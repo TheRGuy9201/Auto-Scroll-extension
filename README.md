@@ -7,46 +7,10 @@ A browser extension that automatically scrolls to the next video on Instagram Re
 - ✅ **Auto-scroll functionality** for Instagram Reels and YouTube Shorts
 - ✅ **Toggle on/off** via popup interface
 - ✅ **Smart video detection** with MutationObserver
-- ✅ **Cross-platform support** for both Instagram and YouTube
+- ✅ **Cross-platform support** for YouTube
 - ✅ **Smooth scrolling animation**
 - ✅ **State persistence** using Chrome storage
-- ✅ **Modern React-based popup UI**
 
-## Technology Stack
-
-- **Frontend**: React 18
-- **State Management**: Redux Toolkit
-- **Browser Extension**: Manifest V3
-- **Build Tool**: Webpack & Create React App
-- **Styling**: CSS Modules
-- **Testing**: Jest & React Testing Library
-
-## Project Structure
-
-```
-auto-scroll-extension/
-├── public/
-│   ├── manifest.json          # Extension manifest
-│   ├── background.js          # Background service worker
-│   ├── content.js            # Content script for video detection
-│   └── index.html            # Popup HTML
-├── src/
-│   ├── components/
-│   │   ├── AutoScrollToggle.js    # Toggle switch component
-│   │   └── VideoPlayerObserver.js # Video monitoring component
-│   ├── redux/
-│   │   ├── store.js               # Redux store configuration
-│   │   └── actions.js             # Redux actions
-│   ├── utils/
-│   │   └── scrollHandler.js       # Scroll utility functions
-│   ├── App.js                     # Main App component
-│   ├── index.js                   # Entry point
-│   └── styles.css                 # Global styles
-├── scripts/
-│   └── build-extension.js         # Build script
-├── package.json
-└── README.md
-```
 
 ## Installation
 
@@ -83,7 +47,7 @@ auto-scroll-extension/
 ## Usage
 
 1. **Install the extension** following the installation steps above
-2. **Navigate to Instagram Reels or YouTube Shorts**
+2. **Navigate to YouTube Shorts**
 3. **Click the extension icon** in your browser toolbar
 4. **Toggle the auto-scroll feature** on/off using the switch
 5. **Watch videos** - the extension will automatically scroll to the next video when each one ends
